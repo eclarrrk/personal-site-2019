@@ -1,0 +1,17 @@
+.form {
+    label {
+        display: block;
+        font-weight: bold;
+    }
+}
+[type="text"],
+[type="email"],
+textarea {
+    display: block;
+    padding: .66em 1em;
+    border: 1px solid lightgray;
+    width: 100%;
+    max-width: 20rem;
+    font-size: 1em;
+    font-weight: normal;
+}
