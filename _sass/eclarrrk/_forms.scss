@@ -4,6 +4,7 @@
         font-weight: bold;
     }
 }
+input:not([type="radio"]):not([type="checkbox"]),
 [type="text"],
 [type="email"],
 textarea {
