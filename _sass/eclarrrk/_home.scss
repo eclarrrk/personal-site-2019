@@ -1,0 +1,13 @@
+.home-hero {
+    padding: 6vh 0;
+}
+.home-writing {}
+.home-websites {}
+.websites-mockup {
+    margin: 1em 0;
+    @include media(md) {
+        max-width: calc( 100% + 6em + 12vw );
+        margin-left: calc( -3em - 6vw );
+        margin-right: calc( -3em - 6vw );
+    }
+}

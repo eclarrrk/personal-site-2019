@@ -1,13 +1,13 @@
-<footer class="site-footer h-card">
+<footer class="site-footer">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
       <div class="footer-col one-half">
-      <h2 class="footer-heading">{{ site.title | escape }}</h2>
-        <ul class="contact-list">
-          <li class="p-name">
+        <h5 class="footer-heading">{{ site.title | escape }}</h5>
+        <!-- <ul class="contact-list">
+           <li class="p-name">
             {% if site.author %}
               {{ site.author | escape }}
             {% else %}
@@ -17,15 +17,39 @@
             {% if site.email %}
             <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {% endif %}
-        </ul>
+        </ul> -->
       </div>
 
-      <div class="footer-col one-half">
+      <div class="text--small">
         <p>{{ site.description | escape }}</p>
-      </div>
+        <p>&copy; {{ 'now' | date: "%Y" }} Eric Clark</small></p>
+        <ul>
+          <li>
+            <a href="https://codepen.io/eclarrrk/" itemprop="url" target="_blank" rel="external noopener">
+              <span class="content-hide-visually">Play with my code experiments on </span>
+              <span itemprop="memberOf">Code&#8202;Pen</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/eclarrrk/" itemprop="url" target="_blank" rel="external noopener">
+              <span class="content-hide-visually">See some web project code on </span>
+              <span itemprop="memberOf">Git&#8202;Hub</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/eclarrrk/" itemprop="url" target="_blank" rel="external noopener">
+              <span class="content-hide-visually">Check out my photos on </span>
+              <span itemprop="memberOf">Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/eclarrrk/">
+              <span class="content-hide-visually">Follow me on </span>
+              <span itemprop="memberOf">Twitter</span>
+            </a>
+          </li>
+        </ul>
 
-      <div class="social-links">
-        {% include social.html %}
       </div>
     </div>
 

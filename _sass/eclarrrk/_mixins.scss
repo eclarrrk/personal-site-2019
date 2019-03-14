@@ -1,0 +1,72 @@
+////////////////////////////////
+// Responsive font size
+$remBase: 16; //set base font size. unitless value in pixels.
+$widthMin: 320; //set small breakpoint. unitless value in pixels.
+$widthMax: 960; //set large breakpoint. unitless value in pixels.
+
+@mixin font-size($valueMin, $valueMax) {
+	// turn mixin parameters into rem value.
+	$fontMin: $valueMin * $remBase;
+	$fontMax: $valueMax * $remBase;
+	
+	// set minimum font size. give it rem value.
+	font-size: $valueMin * 1rem;
+	
+	// set font size between min and max breakpoints.
+	@media (min-width: #{$widthMin}px) {
+		font-size: calc( #{$fontMin}px + (#{$fontMax} - #{$fontMin}) * ((100vw - #{$widthMin}px) / (#{$widthMax} - #{$widthMin})));
+	}
+
+	// set font size above max breakpoint
+	@media (min-width: #{$widthMax}px) {
+		font-size: $valueMax * 1rem;
+	}
+}
+
+/////////////////////////////////////
+// Breakpoint mixin
+@mixin media($breakpoint) {
+    @if $breakpoint==xs {
+        @media screen and (min-width: $bp--xs) {
+            @content;
+        }
+    }
+    @else if $breakpoint==sm {
+        @media (min-width: $bp--sm) {
+            @content;
+        }
+    }
+    @else if $breakpoint==md {
+        @media screen and (min-width: $bp--md) {
+            @content;
+        }
+    }
+    @else if $breakpoint==lg {
+        @media screen and (min-width: $bp--lg) {
+            @content;
+        }
+    }
+    @else if $breakpoint==xl {
+        @media screen and (min-width: $bp--xl) {
+            @content;
+        }
+    }
+    @else if $breakpoint==xxl {
+        @media screen and (min-width: $bp--xxl) {
+            @content;
+        }
+    }
+    @else if $breakpoint==collapse {
+        @media screen and (min-width: $bp--collapse) {
+            @content;
+        }
+    }
+    @else if $breakpoint==collapse-lg {
+        @media screen and (min-width: $bp--collapse-lg) {
+            @content;
+        }
+    }
+    @else {
+        @warn"Breakpoint mixin supports: xs, sm, md, lg, collapse, collapse-lg";
+    }
+}

@@ -4,20 +4,72 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <!-- hello block -->
+  <div class="home-hero">
+    <div class="wrapper">
+      <h1 class="page-heading">
+        Hello. <span alt="waving hand">👋</span><br>
+        I'm a Lancaster-based front-end designer.
+      </h1>
+    </div>
+  </div>
+  <!-- /hello block -->
+  <!-- website block -->
+  <section>
+    <div class="wrapper">
+      <h2>I plan, design, and develop websites at&nbsp;<a href="https://infantree.com" target="_blank" rel="noreferrer">Infantree</a>.</h2>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <img class="websites-mockup" alt="Screenshots of the Rodaleinstitute.org, empowertheorphaned.org, and ywcalancaster.org mocked up in simple sketches of devices."
+        srcest="  
+                /assets/images/website-mockups-600.png 600,
+                /assets/images/website-mockups-900.png 900,
+                /assets/images/website-mockups-1200.png 1200,
+                /assets/images/website-mockups-600-2x.png 1200,
+                /assets/images/website-mockups-900-2x.png 1800"
+        sizes="(max-width: 768px) 100vw, 710px" src="/assets/images/website-mockups-1200.png">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos iste assumenda eum repudiandae!
+        Distinctio
+        laudantium quos tempora voluptate cupiditate dolore molestias, delectus numquam natus voluptatibus. Quis nihil
+        quaerat facilis cumque labore quae rerum incidunt beatae itaque nam, pariatur quibusdam assumenda, aspernatur
+        sunt, doloribus aperiam autem. Quo officiis iste voluptatum ut!</p>
+    </div>
+  </section>
+  <!-- /website block -->
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <!-- blog block -->
+  <section>
+    <div class="wrapper">
+      <h2>I write about things I've learned.</h2>
+      <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+          <h3>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+          </h3>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+  <!-- /blog block -->
+
+  <!-- meetup block -->
+  <section class="home-meetup columns">
+      <div class="home-meetup__text column__text">
+        <div class="wrapper">
+        <h2>I organize a meetup.</h2>
+        <p>Since July 2015, the Lancaster Front-end Meetup has been a place for</p>
+        <p>We meet every first Wednesday at <a href="https://candyissweet.com/" target="_blank" rel="noreferrer">The
+            Candy Factory</a> in Lancaster, PA.</p>
+          </div>
+      </div>
+      <div class="home-meetup__image column__image">
+        <img src="https://picsum.photos/400" alt="">
+      </div>
+  </section>
+  <!-- /meetup block -->
+
 
 </div>
