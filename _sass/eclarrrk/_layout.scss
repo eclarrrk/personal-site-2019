@@ -1,4 +1,7 @@
 .page-content {
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // grid-gap: 3em 1em;
     padding-top: 2em;
     padding-bottom: 2em;
 }
@@ -10,17 +13,13 @@ section {
 
 .columns {
 
-    .column__text {
+    .column__primary {
     }
-    .column__image {
-        background-color: var(--c-2--l);
-        img {
-        mix-blend-mode: luminosity;
+    .column__secondary {
     }
-}
 
     @include media(xs) {
-        .column__image {
+        .column__secondary {
             // float: right;
             // width: 30%;
         }
@@ -31,10 +30,10 @@ section {
         flex-direction: row;
     }
 
-    .column__text {
+    .column__primary {
         flex: 1;
     }
-    .column__image {
+    .column__secondary {
         flex: .75;
     }
 

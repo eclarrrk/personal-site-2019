@@ -11,3 +11,11 @@
         margin-right: calc( -3em - 6vw );
     }
 }
+.home__meetup {
+    figure {
+    background-color: var(--c-2--l);
+        img {
+            mix-blend-mode: luminosity;
+        }
+    }
+}

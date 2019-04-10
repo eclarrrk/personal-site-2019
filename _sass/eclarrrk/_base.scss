@@ -87,6 +87,24 @@ li {
     margin-bottom: 0;
   }
 }
+.list-unstyled {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+	}
+
+	li:before {
+		content: "\200B";
+		position: absolute;
+  }
+}
+hr {
+  background-color: var(--c-2--ll);
+  border: 0;
+  height: 2px;
+}
 
 h1,
 h2,

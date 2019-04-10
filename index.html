@@ -1,15 +1,17 @@
 ---
-layout: default
+layout: home
 ---
 
 <div class="home">
 
   <!-- hello block -->
-  <div class="home-hero">
+  <div class="home__hero">
     <div class="wrapper">
-      <h1 class="page-heading">
-        Hello. <span alt="waving hand">👋</span><br>
-        I'm a Lancaster-based front-end designer.
+      <h1 class="home__hero-title">
+        <span alt="waving hand">👋</span>
+        <small>Hi, I'm</small>
+        Eric Clark. 
+        <small></small>and I'm a front-end designer.
       </h1>
     </div>
   </div>
@@ -40,12 +42,12 @@ layout: default
   <section>
     <div class="wrapper">
       <h2>I write about things I've learned.</h2>
-      <ul class="post-list">
+      <ul class="post-list list-unstyled">
         {% for post in site.posts %}
-        <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-          <h3>
+        <li class="post-list__item">
+          <span class="post-list__post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    
+          <h3 class="post-title__post-title">
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
           </h3>
         </li>
@@ -57,17 +59,18 @@ layout: default
 
   <!-- meetup block -->
   <section class="home-meetup columns">
-      <div class="home-meetup__text column__text">
-        <div class="wrapper">
+    <div class="column__primary">
+      <div class="wrapper">
         <h2>I organize a meetup.</h2>
-        <p>Since July 2015, the Lancaster Front-end Meetup has been a place for</p>
+        <p>Since July 2015, the Lancaster Front-end Meetup has been a place to share, learn, and discuss topics
+          relating to front-end design and development.</p>
         <p>We meet every first Wednesday at <a href="https://candyissweet.com/" target="_blank" rel="noreferrer">The
             Candy Factory</a> in Lancaster, PA.</p>
-          </div>
       </div>
-      <div class="home-meetup__image column__image">
-        <img src="https://picsum.photos/400" alt="">
-      </div>
+    </div>
+    <figure class="column__secondary">
+      <img src="https://picsum.photos/400" alt="">
+    </figure>
   </section>
   <!-- /meetup block -->
 
